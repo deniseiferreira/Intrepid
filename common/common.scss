@@ -1,3 +1,27 @@
+input {
+  &[type="text"],
+  &[type="password"],
+  &[type="datetime"],
+  &[type="datetime-local"],
+  &[type="date"],
+  &[type="month"],
+  &[type="time"],
+  &[type="week"],
+  &[type="number"],
+  &[type="email"],
+  &[type="url"],
+  &[type="search"],
+  &[type="tel"],
+  &[type="color"] {
+    
+    &:focus {
+      border-color: $highlight;
+      box-shadow: 0 0 6px 0 $highlight;
+      outline: 0;
+    }
+  }
+}
+
 //Links
 
 a {
@@ -20,26 +44,26 @@ a {
 // Header
 
 .d-header {
-
+  
   .panel {
     position: 0;
   }
-
+  
   .header-buttons {
     height:100%;
     margin-top: 0;
     
-        .btn-primary {
-            background:none;
-            height:100%;
-            margin-top:0;
-    
-        &:hover{
-            background:$quaternary;
-        }
-        }
+    .btn-primary {
+      background:none;
+      height:100%;
+      margin-top:0;
+      
+      &:hover{
+        background:$quaternary;
+      }
     }
-
+  }
+  
   button.login-button {
     margin-left: 0;
   }
@@ -47,156 +71,180 @@ a {
   .login-button,  button.sign-up-button{
     height: 100%;
     margin-left:0;
-    }
+  }
 }
 
 .d-header-icons{ 
-    .icons{
-        align-items: center;
-        justify-content: center;
-    }
-    .header-dropdown-toggle{
-        height: 60px;
-        .icon {
-            margin-top:10px;
-           .d-icon {
-                color: $secondary;
-            }
-        
-            &:hover{
-                background-color: transparent;
-                .d-icon {
-                    color: $secondary;
-                }
-            }
-            &:focus{
-                background-color: transparent;
-                .d-icon {
-                    color: $secondary;
-                }
-            }
+  .icons{
+    align-items: center;
+    justify-content: center;
+  }
+  .header-dropdown-toggle{
+    height: 60px;
+    .icon {
+      margin-top:10px;
+      .d-icon {
+        color: $secondary;
+      }
+      
+      &:hover{
+        background-color: transparent;
+        .d-icon {
+          color: $secondary;
         }
-    }
-    
-    .drop-down-mode & {
-        .active .icon {
-          &:after {
-            border-top:none;  
-          }
+      }
+      &:focus{
+        background-color: transparent;
+        .d-icon {
+          color: $secondary;
         }
-    }      
-
-    .header-dropdown-toggle.active{
-        height: 60px;
-        background-color: #EDEDED;
-        .icon {
-            background-color: #EDEDED;
-            border-style: none;
-            .d-icon {
-                color: $header-background;
-            }
-        }
+      }
     }
+  }
+  
+  .drop-down-mode & {
+    .active .icon {
+      &:after {
+        border-top:none;  
+      }
+    }
+  }      
+  
+  .header-dropdown-toggle.active{
+    height: 60px;
+    background-color: #EDEDED;
+    .icon {
+      background-color: #EDEDED;
+      border-style: none;
+      .d-icon {
+        color: $header-background;
+      }
+    }
+  }
 }
 
 .menu-container-general-links {
-    color:$primary;
+  color:$primary;
 }
 
 .contents .clearfix{
-    height: 100%;
+  height: 100%;
 }
 
 .panel .clearfix{
-    height: 100%;
+  height: 100%;
 }
 
 .menu-panel {
-    border: 1px solid #ededed;
-    background-color: #ededed;
+  border: 1px solid #ededed;
+  background-color: #ededed;
+  
+  li,
+  li.heading {
+    a.widget-link {
+      &:hover,
+      &:focus {
+        background-color: $quaternary;
+        color:$secondary;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .category-links, .menu-container-admin-links, .menu-container-general-links {
+    border-top: 1px solid $secondary;
+  }
+  hr {
+    margin: 0px;
+    height: 0px;
+  }
 }
-
 
 
 //Body
 
 body {
-    font-family: "Open-sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-family: "Open-sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
-
 
 // Navigation Bar
 
 .list-controls .combo-box .combo-box-header {
-    border: 1px solid $quaternary;
-     color: $quaternary;
+  border: 1px solid $quaternary;
+  color: $quaternary;
 }
 
 .select-kit .d-icon {
-    color: $primary;
+  color: $primary;
 }
 
 #navigation-bar.nav-pills {
   > li {
     > a {
       &:hover {
-          color:$secondary;
-          background-color:$quaternary;
+        color:$secondary;
+        background-color:$quaternary;
       }
     }
   } 
- }
- 
+}
+
 .list-controls {
- .combo-box .combo-box-header {
+  .combo-box .combo-box-header {
     color: $quaternary;
     border: 1px solid $quaternary;
- }
+  }
 }
 
 
 // Table
 
 table th {
-    font-weight: bold;
-    color: $primary;
-    tr:nth-child(even) {background: #EDEDED}
-    tr:nth-child(odd) {background: #FFF}
+  font-weight: bold;
+  color: $primary;
+  tr:nth-child(even) {background: #EDEDED}
+  tr:nth-child(odd) {background: #FFF}
 }
 
 .topic-list-item.visited a.title:not(.badge-notification){
-    color: $quaternary;
-    font-weight: 400;
-    font-size: 16px;
+  color: $quaternary;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .badge-wrapper {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .badge-posts[href] {
-    color: $tertiary;
+  color: $tertiary;
 }
 
-.category-list {
-    tr:nth-child(even) {background: #EDEDED}
-    tr:nth-child(odd) {background: #FFF}
+.category-list, .topic-list {
+  tbody{
+    tr{
+      td{
+        border-top: 1px solid #D2D2D2 !important;
+      }
+      &:nth-child(even) {background: #F4F4F4}
+      &:nth-child(odd) {background: #FFF}
+    }
+  }
 }   
 
 .category-list th {
-    font-weight: 600;
-    color: $primary;
+  font-weight: 600;
+  color: $primary;
 }
 
 .category-list tbody .category h3 a[href]{
-    color: $quaternary;
-    font-weight: 400;
-    font-size: 16px;
+  color: $quaternary;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .category-description {
-    color: $primary;
-    font-weight:400;
-    font-size: 16px;
+  color: $primary;
+  font-weight:400;
+  font-size: 16px;
 }
-
