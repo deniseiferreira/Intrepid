@@ -1,5 +1,27 @@
 {
-  "name": "Intrepid",
-  "about_url": "https://some.url.com",
-  "license_url": "https://github.com/deniseiferreira/Intrepid/blob/master/LICENSE"
+  "name": "Lisbon",
+  "component": false,
+  "license_url": "https://github.com/deniseiferreira/Lisbon/blob/master/LICENSE",
+  "about_url": "http://deniseferreira.design",
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+  },
+  "color_schemes": {
+    "Intrepid": {
+      "primary": "454545",
+      "secondary": "ffffff",
+      "tertiary": "d8343d",
+      "quaternary": "00ab99",
+      "header_background": "2b3945",
+      "header_primary": "ffffff",
+      "highlight": "3892e3",
+      "danger": "b94a48",
+      "success": "468b47",
+      "love": "d8343d"
+    }
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
 }
